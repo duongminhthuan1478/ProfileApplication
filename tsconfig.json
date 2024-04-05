@@ -2,6 +2,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": "src",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -19,10 +20,17 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
-    "lib": [
-      "ES2022",
-      "dom"
-    ]
+    "lib": ["ES2022", "dom"],
+    "paths": {
+      "@graphql/*": ["app/graphql/*"],
+      "@config/*": ["app/config/*"],
+      "@core/*": ["app/core/*"],
+      "@models/*": ["app/models/*"],
+      "@constants/*": ["app/constants/*"],
+      "@shared/*": ["app/shared/*"],
+      "@utils/*": ["app/utils/*"],
+      "@features/*": ["app/features/*"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
